@@ -1,0 +1,15 @@
+<h1 class="text-center">
+  {{title}}
+</h1>
+<hr>
+<div class="container">
+	<div class="row">
+		<div *ngIf="posts" class="col-md-10  col-md-offset-1">
+			<div *ngFor="let post of posts ">
+				<h2>{{post.id}}. {{post.title}}</h2>
+				<p>{{post.summary}}</p>
+				<code>By : {{post.author}} on {{post.date}}</code>
+			</div>
+		</div>
+	</div>
+</div>
